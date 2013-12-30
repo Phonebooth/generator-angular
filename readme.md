@@ -1,3 +1,16 @@
+--
+
+This is a fork. Make sure you stay in sync with upsteam changes:  
+[https://help.github.com/articles/syncing-a-fork](https://help.github.com/articles/syncing-a-fork)
+
+Make sure the real generator-angular is uninstalled:  
+`npm uninstall -g generator-angular`
+
+Install this generator:  
+`npm install -g git://github.com/lesjames/generator-angular.git`
+
+--
+
 # AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.png?branch=master)](http://travis-ci.org/yeoman/generator-angular) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 > Yeoman generator for AngularJS - lets you quickly set up a project with sensible defaults and best practises.
