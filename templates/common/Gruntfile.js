@@ -37,7 +37,7 @@ module.exports = function (grunt) {
       },<% } else { %>
       js: {
         files: ['<%%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
+        tasks: ['newer:jsbeautifier', 'newer:jshint:all'],
         options: {
           livereload: true
         }
@@ -120,6 +120,20 @@ module.exports = function (grunt) {
         },
         src: ['test/spec/{,*/}*.js']
       }<% } %>
+    },
+
+    jsbeautifier: {
+      files: [
+        'Gruntfile.js',
+        '<%%= yeoman.app %>/scripts/{,*/}*.js',
+        'test/spec/{,*/}*.js'
+      ],
+      options: {
+        indentSize: 4,
+        indentWithTabs: false,
+        maxPreserveNewlines: 2,
+        preserveNewlines: true
+      }
     },
 
     // Empties folders to start fresh
@@ -443,6 +457,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
+    'newer:jsbeautifier',
     'newer:jshint',
     'test',
     'build'
