@@ -7,7 +7,7 @@ Make sure the real generator-angular is uninstalled:
 `npm uninstall -g generator-angular`
 
 Install this generator:  
-`npm install -g git://github.com/lesjames/generator-angular.git`
+`npm install -g git://github.com/Phonebooth/generator-angular.git`
 
 --
 
